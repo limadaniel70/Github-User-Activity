@@ -14,6 +14,7 @@ async def get_user_data_async(username: str) -> Optional[httpx.Response]:
             print(f"An error ocurred: {e}")
             return None
 
+
 def get_user_data(username: str) -> Optional[httpx.Response]:
     with httpx.Client() as client:
         try:
@@ -23,6 +24,7 @@ def get_user_data(username: str) -> Optional[httpx.Response]:
         except httpx.HTTPError as e:
             print(f"An error ocurred: {e}")
             return None
+
 
 if __name__ == "__main__":
     name = input()
