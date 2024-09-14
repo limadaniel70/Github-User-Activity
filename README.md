@@ -1,7 +1,7 @@
 # Github-User-Activity
 
 > [!NOTE]
-> This is a sample solution to [Roadmap.sh](roadmap.sh) challaenge [Github user activity challenge](https://roadmap.sh/projects/github-user-activity).
+> This is a sample solution to [Roadmap.sh](roadmap.sh) [Github user activity challenge](https://roadmap.sh/projects/github-user-activity) challenge.
 
 ## How to run
 
