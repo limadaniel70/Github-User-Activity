@@ -1,9 +1,9 @@
 #!/bin/env python3
 import argparse
 import asyncio
-import parser
 
-import fetcher
+from . import fetcher, parser
+
 
 def main():
     argparser = argparse.ArgumentParser()
@@ -16,6 +16,7 @@ def main():
 
     for message in messages:
         print(f"° {message}")
+
 
 if __name__ == "__main__":
     main()
