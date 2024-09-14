@@ -1,3 +1,3 @@
-from main import main
+from . import github_activity
 
-main()
+github_activity.main()
