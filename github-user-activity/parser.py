@@ -5,11 +5,11 @@ def parse(response) -> list[str]:
     messages: list[str] = []
     for event in response:
         if event["type"] in tracked_events:
-            if event["type"] is tracked_events[0]:
+            if event["type"] == tracked_events[0]:
                 messages.append(parse_push(event))
-            elif event["type"] is tracked_events[1]:
+            elif event["type"] == tracked_events[1]:
                 messages.append(parse_pull_request(event))
-            elif event["type"] is tracked_events[2]:
+            elif event["type"] == tracked_events[2]:
                 messages.append(parse_issue(event))
         continue
     return messages
@@ -17,7 +17,7 @@ def parse(response) -> list[str]:
 
 def parse_issue(event) -> str:
     repo: str = get_repository(event)
-    issue_type: str = event["payload"]["Action"]
+    issue_type: str = event["payload"]["action"]
     return f"{issue_type} in {repo}"
 
 
